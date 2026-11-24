@@ -1,0 +1,14 @@
+@media (min-width: 411px) {
+  .phone {
+    height: 844px;
+    min-height: 844px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+  }
+
+  .phone::-webkit-scrollbar {
+    display: none;
+  }
+}

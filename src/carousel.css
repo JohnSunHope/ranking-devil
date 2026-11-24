@@ -1,0 +1,252 @@
+.detail-view-switch {
+  margin: 18px 14px 0;
+  padding: 4px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  border: 1px solid #29282f;
+  border-radius: 14px;
+  background: #15151a;
+}
+
+.detail-view-switch button {
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  color: #85828c;
+  background: transparent;
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.detail-view-switch button.active {
+  color: #fff;
+  background: #2a282f;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.object-carousel {
+  margin: 14px 0 10px;
+  overflow: hidden;
+}
+
+.object-carousel > div {
+  padding: 0 max(18px, calc((100% - 308px) / 2));
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: max(18px, calc((100% - 308px) / 2));
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.object-carousel > div::-webkit-scrollbar {
+  display: none;
+}
+
+.object-carousel article {
+  position: relative;
+  width: min(308px, calc(100vw - 58px));
+  min-width: min(308px, calc(100vw - 58px));
+  min-height: 390px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  border: 1px solid #34323a;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 80% 12%, rgba(135, 87, 255, 0.24), transparent 35%),
+    linear-gradient(150deg, #1d1922, #121216 68%);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
+}
+
+.object-carousel article:nth-child(3n + 2) {
+  background:
+    radial-gradient(circle at 80% 12%, rgba(255, 40, 85, 0.22), transparent 35%),
+    linear-gradient(150deg, #21171b, #121216 68%);
+}
+
+.object-carousel article:nth-child(3n + 3) {
+  background:
+    radial-gradient(circle at 80% 12%, rgba(185, 255, 61, 0.14), transparent 35%),
+    linear-gradient(150deg, #18201a, #121216 68%);
+}
+
+.object-carousel article > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.object-carousel article > header > span {
+  color: #ff5274;
+  font: 900 16px 'Archivo Black', sans-serif;
+}
+
+.object-carousel article > header > small {
+  color: #77747e;
+  font-size: 9px;
+}
+
+.object-carousel article > h2 {
+  margin: 13px 0 8px;
+  font-size: 21px;
+  letter-spacing: -0.6px;
+}
+
+.carousel-score {
+  flex: 1;
+  min-height: 245px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image-score {
+  font-size: 112px;
+  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.42));
+}
+
+.carousel-length {
+  width: 100%;
+}
+
+.carousel-length > i {
+  display: block;
+  height: 30px;
+  min-width: 3px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #ff2855, #ff8068);
+  box-shadow: 0 0 28px rgba(255, 40, 85, 0.36);
+}
+
+.carousel-length > strong {
+  display: block;
+  margin-top: 14px;
+  color: #b9ff3d;
+  font-size: 31px;
+  text-align: center;
+}
+
+.carousel-area {
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 28%, #ff7892, #ff2855 58%, #831228);
+  box-shadow: 0 20px 46px rgba(255, 40, 85, 0.27);
+}
+
+.carousel-area > strong {
+  font-size: 25px;
+}
+
+.carousel-rank {
+  text-align: center;
+}
+
+.carousel-rank > strong {
+  display: block;
+  color: #ff5274;
+  font: 900 78px/1 'Archivo Black', sans-serif;
+}
+
+.carousel-rank > span {
+  display: block;
+  margin-top: 15px;
+  color: #b9ff3d;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.carousel-score .symbol-cloud {
+  width: 100%;
+  max-height: 230px;
+  overflow: hidden;
+}
+
+.carousel-score .symbol-cloud > div {
+  justify-content: center;
+}
+
+.carousel-score .symbol-cloud span,
+.carousel-score .symbol-cloud.loose span,
+.carousel-score .symbol-cloud.medium span,
+.carousel-score .symbol-cloud.dense span,
+.carousel-score .symbol-cloud.micro span {
+  width: 15px;
+  height: 15px;
+  font-size: 12px;
+}
+
+.object-carousel article > footer {
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.object-carousel article > footer > span {
+  color: #77747e;
+  font-size: 9px;
+}
+
+.object-carousel article > footer > b {
+  max-width: 65%;
+  overflow: hidden;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.object-carousel > p {
+  margin: 11px 0 0;
+  color: #77747e;
+  font-size: 9px;
+  text-align: center;
+}
+
+.object-summary > div > button {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+  flex: 1 1 calc(50% - 7px);
+  border: 1px solid #2c2b32;
+  border-radius: 12px;
+  color: #fff;
+  background: #18181d;
+  text-align: left;
+}
+
+.object-summary > div > button > b {
+  overflow: hidden;
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.object-summary > div > button > strong {
+  flex: 0 0 auto;
+  color: #b9ff3d;
+  font-size: 9px;
+}
+
+@media (max-width: 360px) {
+  .object-carousel article {
+    width: calc(100vw - 48px);
+    min-width: calc(100vw - 48px);
+    min-height: 360px;
+  }
+
+  .carousel-score {
+    min-height: 215px;
+  }
+}

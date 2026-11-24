@@ -1,0 +1,62 @@
+/* Override the legacy two-item length selectors inside waterfall cards. */
+.tile-score.tool-长度评分 > .multi-bars {
+  width: 100%;
+  height: 100%;
+  padding: 6px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.tile-score.tool-长度评分 .multi-bars > span {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 49px minmax(0, 1fr) 23px;
+  align-items: center;
+  gap: 5px;
+}
+
+.tile-score.tool-长度评分 .multi-bars > span > b {
+  display: block;
+  overflow: hidden;
+  font-size: 7px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tile-score.tool-长度评分 .multi-bars > span > i {
+  width: 100%;
+  height: 10px;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.tile-score.tool-长度评分 .multi-bars > span > i > em {
+  height: 100%;
+  display: block;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ff2855, #ff8068);
+  box-shadow: 0 0 12px rgba(255, 40, 85, 0.38);
+}
+
+.tile-score.tool-长度评分 .multi-bars > span:nth-child(even) > i > em {
+  background: linear-gradient(90deg, #8757ff, #b28fff);
+  box-shadow: 0 0 12px rgba(135, 87, 255, 0.38);
+}
+
+.tile-score.tool-长度评分 .multi-bars > span > strong {
+  display: block;
+  color: #b9ff3d;
+  font-size: 8px;
+  text-align: right;
+}
+
+@media (max-width: 360px) {
+  .tile-score.tool-长度评分 .multi-bars > span {
+    grid-template-columns: 42px minmax(0, 1fr) 21px;
+  }
+}

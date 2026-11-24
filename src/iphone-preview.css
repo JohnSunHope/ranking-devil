@@ -1,0 +1,67 @@
+/* iPhone 12 Pro logical viewport: 390 × 844. */
+.shell {
+  min-height: 100vh;
+  padding: 20px 0 36px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.phone {
+  position: relative;
+  width: 390px;
+  max-width: calc(100vw - 20px);
+  min-height: 844px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #34323b;
+  border-radius: 42px;
+  background: #0e0e11;
+  box-shadow:
+    0 0 0 6px #050506,
+    0 28px 90px rgba(0, 0, 0, 0.65);
+}
+
+.page {
+  min-height: 844px;
+}
+
+.bottom {
+  width: 390px;
+  max-width: calc(100vw - 20px);
+}
+
+.top {
+  padding-top: 17px;
+}
+
+@media (max-width: 410px) {
+  .shell {
+    min-height: 100dvh;
+    padding: 0;
+    display: block;
+  }
+
+  .phone {
+    width: 100%;
+    max-width: none;
+    min-height: 100dvh;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .page {
+    min-height: 100dvh;
+  }
+
+  .bottom {
+    width: 100%;
+    max-width: none;
+  }
+
+  .top {
+    padding-top: max(13px, env(safe-area-inset-top));
+  }
+}

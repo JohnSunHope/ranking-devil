@@ -1,0 +1,31 @@
+.home-top {
+  position: sticky;
+}
+
+.home-top .feed-tabs {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.home-top > .logo,
+.home-top > .circle {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 360px) {
+  .home-top .logo {
+    max-width: 78px;
+    overflow: hidden;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+
+  .home-top .feed-tabs {
+    gap: 9px;
+  }
+}

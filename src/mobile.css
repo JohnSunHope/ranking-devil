@@ -1,0 +1,144 @@
+/* Ranking Devil is a mobile app. Desktop-only rails are intentionally disabled. */
+.shell {
+  display: block;
+  width: 100%;
+  min-height: 100dvh;
+  background: #09090b;
+}
+
+.side,
+.context {
+  display: none;
+}
+
+.phone {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  border: 0;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.6);
+}
+
+.page {
+  min-height: 100dvh;
+  padding-bottom: 76px;
+}
+
+.top {
+  min-height: 62px;
+  padding-top: max(13px, env(safe-area-inset-top));
+}
+
+.bottom {
+  left: 50%;
+  width: min(480px, 100%);
+  height: calc(67px + env(safe-area-inset-bottom));
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.feed {
+  min-height: calc(100dvh - 129px);
+}
+
+.post {
+  min-height: calc(100dvh - 129px);
+  display: flex;
+  flex-direction: column;
+}
+
+.post .rating-button {
+  flex: 1;
+  display: flex;
+}
+
+.post .rating {
+  width: 100%;
+  min-height: 270px;
+  flex: 1;
+}
+
+.pager {
+  right: 8px;
+  top: 44%;
+}
+
+.pager small {
+  display: none;
+}
+
+.content {
+  padding-inline: 16px;
+}
+
+.rating.large {
+  min-height: 340px;
+}
+
+.detail > .rating {
+  margin-inline: 12px;
+}
+
+.create {
+  padding-bottom: 36px;
+}
+
+@media (min-width: 481px) {
+  body {
+    background:
+      radial-gradient(circle at 50% 8%, rgba(255, 40, 85, 0.11), transparent 35%),
+      #09090b;
+  }
+
+  .phone {
+    border-inline: 1px solid #28272d;
+  }
+}
+
+@media (max-width: 410px) {
+  .top {
+    padding-inline: 13px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .feed-tabs {
+    gap: 12px;
+  }
+
+  .rating {
+    min-height: 255px;
+  }
+
+  .actions {
+    gap: 5px;
+  }
+
+  .actions button {
+    font-size: 9px;
+  }
+
+  .post {
+    padding-inline: 13px;
+  }
+
+  .post-heading h1,
+  .detail-head h1 {
+    font-size: 22px;
+  }
+
+  .tools {
+    gap: 7px;
+  }
+
+  .tools button {
+    min-height: 96px;
+    padding: 12px;
+  }
+
+  .value {
+    grid-template-columns: 1fr 76px 62px;
+  }
+}

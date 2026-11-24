@@ -1,0 +1,47 @@
+/* Within one comparison, symbol size is fixed. Only quantity encodes strength. */
+.symbols .symbol-cloud span {
+  width: 10px;
+  height: 10px;
+  font-size: 8px;
+}
+
+.symbols.large .symbol-cloud span {
+  width: 11px;
+  height: 11px;
+  font-size: 9px;
+}
+
+.tile-score.tool-无限符号 .symbol-cloud span,
+.tile-score.tool-无限符号 .symbol-cloud.loose span,
+.tile-score.tool-无限符号 .symbol-cloud.medium span,
+.tile-score.tool-无限符号 .symbol-cloud.dense span,
+.tile-score.tool-无限符号 .symbol-cloud.micro span {
+  width: 7px;
+  height: 7px;
+  font-size: 6px;
+}
+
+.symbol-editor-card .symbol-cloud span,
+.symbol-editor-card .symbol-cloud.loose span,
+.symbol-editor-card .symbol-cloud.medium span,
+.symbol-editor-card .symbol-cloud.dense span,
+.symbol-editor-card .symbol-cloud.micro span {
+  width: 10px;
+  height: 10px;
+  font-size: 8px;
+}
+
+.symbols .symbol-cloud > div,
+.tile-score.tool-无限符号 .symbol-cloud > div,
+.symbol-editor-card .symbol-cloud > div {
+  gap: 1px;
+}
+
+@media (max-width: 360px) {
+  .symbols .symbol-cloud span,
+  .symbols.large .symbol-cloud span {
+    width: 9px;
+    height: 9px;
+    font-size: 7px;
+  }
+}

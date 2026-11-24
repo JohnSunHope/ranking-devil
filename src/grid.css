@@ -1,0 +1,244 @@
+.home-grid-page {
+  background: #0e0e11;
+}
+
+.waterfall {
+  columns: 2;
+  column-gap: 10px;
+  padding: 12px 10px 94px;
+}
+
+.tile {
+  position: relative;
+  width: 100%;
+  margin: 0 0 12px;
+  display: inline-block;
+  overflow: hidden;
+  break-inside: avoid;
+  border: 1px solid #27262d;
+  border-radius: 17px;
+  background: #17171c;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.tile-cover {
+  position: relative;
+  width: 100%;
+  min-height: 210px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  color: #fff;
+  background:
+    radial-gradient(circle at 35% 22%, rgba(135, 87, 255, 0.35), transparent 35%),
+    linear-gradient(150deg, #28202f, #111115 72%);
+}
+
+.tile-1 .tile-cover,
+.tile-5 .tile-cover {
+  min-height: 270px;
+  background:
+    radial-gradient(circle at 75% 15%, rgba(185, 255, 61, 0.18), transparent 35%),
+    linear-gradient(150deg, #1e2925, #111115 72%);
+}
+
+.tile-2 .tile-cover,
+.tile-6 .tile-cover {
+  min-height: 230px;
+}
+
+.tile-3 .tile-cover,
+.tile-7 .tile-cover {
+  min-height: 300px;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 40, 85, 0.3), transparent 38%),
+    linear-gradient(150deg, #29191f, #111115 72%);
+}
+
+.tile-cover > em {
+  position: absolute;
+  left: 9px;
+  bottom: 9px;
+  padding: 5px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  color: #d8d5dc;
+  background: rgba(10, 10, 12, 0.75);
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.tile-score {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 22px 9px 38px;
+}
+
+.tile-score strong {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(37px, 12vw, 58px);
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.4));
+}
+
+.tile-score strong small {
+  max-width: 100%;
+  margin-top: 12px;
+  overflow: hidden;
+  color: #e2dfe4;
+  font-size: 9px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tile-score.tool-无限符号 {
+  flex-direction: column;
+  gap: 9px;
+}
+
+.tile-score.tool-无限符号 strong {
+  width: 100%;
+  flex: 0;
+  padding: 12px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 20px;
+}
+
+.tile-score.tool-无限符号 strong small {
+  margin-top: 4px;
+}
+
+.tile-score.tool-长度评分 {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.tile-score.tool-长度评分 span {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.tile-score.tool-长度评分 span i {
+  display: block;
+  height: 14px;
+  max-width: 100%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #ff2855, #ff7a62);
+}
+
+.tile-score.tool-长度评分 span:nth-child(2) i {
+  background: linear-gradient(90deg, #8757ff, #b28fff);
+}
+
+.tile-score.tool-长度评分 span b {
+  font-size: 8px;
+  text-align: left;
+}
+
+.tile-body {
+  padding: 11px 11px 10px;
+}
+
+.tile-title {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  color: #f5f2f0;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 850;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.tile-tags {
+  margin-top: 5px;
+  color: #9b76ff;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.tile footer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.tile-avatar {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff2855, #8757ff);
+  font-size: 11px;
+}
+
+.tile footer small {
+  min-width: 0;
+  overflow: hidden;
+  color: #8e8b94;
+  font-size: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tile footer button {
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  color: #aaa7b0;
+  background: transparent;
+  font-size: 8px;
+}
+
+.tile-remix {
+  width: 100%;
+  margin-top: 9px;
+  padding: 7px;
+  border: 1px solid rgba(255, 40, 85, 0.35);
+  border-radius: 10px;
+  color: #ff6b87;
+  background: rgba(255, 40, 85, 0.07);
+  font-size: 8px;
+  font-weight: 850;
+}
+
+@media (max-width: 360px) {
+  .waterfall {
+    column-gap: 8px;
+    padding-inline: 8px;
+  }
+
+  .tile {
+    margin-bottom: 9px;
+    border-radius: 14px;
+  }
+
+  .tile-cover {
+    min-height: 185px;
+  }
+
+  .tile-1 .tile-cover,
+  .tile-5 .tile-cover {
+    min-height: 240px;
+  }
+
+  .tile-3 .tile-cover,
+  .tile-7 .tile-cover {
+    min-height: 265px;
+  }
+}

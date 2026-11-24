@@ -1,0 +1,214 @@
+.tile-score > .multi-bars,
+.tile-score > .multi-symbols,
+.tile-score > .multi-bubbles,
+.tile-score > .multi-ranking,
+.tile-score > .multi-images {
+  width: 100%;
+  height: 100%;
+}
+
+.multi-bars {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 9px;
+}
+
+.multi-bars > span {
+  display: grid;
+  grid-template-columns: 48px 1fr 22px;
+  align-items: center;
+  gap: 5px;
+}
+
+.multi-bars b,
+.multi-bars strong {
+  overflow: hidden;
+  font-size: 7px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.multi-bars strong {
+  color: #b9ff3d;
+}
+
+.multi-bars i {
+  display: block;
+  height: 9px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.multi-bars em {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ff2855, #ff8068);
+}
+
+.multi-bars > span:nth-child(even) em {
+  background: linear-gradient(90deg, #8757ff, #b28fff);
+}
+
+.multi-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 5px;
+}
+
+.multi-bubbles > span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 28%, #ff718e, #ff2855 55%, #8e122c);
+  box-shadow: 0 8px 20px rgba(255, 40, 85, 0.2);
+}
+
+.multi-bubbles > span:nth-child(2) {
+  background: radial-gradient(circle at 34% 28%, #bca7ff, #8757ff 55%, #41238f);
+}
+
+.multi-bubbles > span:nth-child(3) {
+  color: #17140f;
+  background: radial-gradient(circle at 34% 28%, #e5ffae, #b9ff3d 55%, #5b8610);
+}
+
+.multi-bubbles b {
+  max-width: 82%;
+  overflow: hidden;
+  font-size: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.multi-bubbles small {
+  font-size: 8px;
+  font-weight: 900;
+}
+
+.multi-ranking {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.multi-ranking > span {
+  display: grid;
+  grid-template-columns: 17px 1fr auto;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 3px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.multi-ranking i {
+  color: #ff5274;
+  font: 900 8px 'Archivo Black', sans-serif;
+}
+
+.multi-ranking b,
+.multi-ranking strong {
+  font-size: 7px;
+}
+
+.multi-ranking strong {
+  color: #ddd8e4;
+}
+
+.multi-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  align-content: center;
+}
+
+.multi-images.items-3,
+.multi-images.items-5,
+.multi-images.items-6 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.multi-images > span {
+  min-width: 0;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.multi-images strong {
+  font-size: 25px;
+}
+
+.multi-images small {
+  max-width: 94%;
+  margin-top: 4px;
+  overflow: hidden;
+  font-size: 6px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.multi-symbols {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.multi-symbols > span {
+  min-height: 42px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 43px;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.multi-symbols .symbol-cloud > div {
+  gap: 0;
+}
+
+.multi-symbols .symbol-cloud span {
+  width: 5px;
+  height: 5px;
+  font-size: 4px;
+}
+
+.multi-symbols > span > b {
+  overflow: hidden;
+  font-size: 7px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.count-5 .tile-cover,
+.count-6 .tile-cover {
+  min-height: 285px;
+}
+
+@media (max-width: 360px) {
+  .multi-bars > span {
+    grid-template-columns: 41px 1fr 20px;
+  }
+
+  .multi-images strong {
+    font-size: 21px;
+  }
+}

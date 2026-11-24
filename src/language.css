@@ -1,0 +1,67 @@
+.preferences {
+  margin-top: 28px;
+  padding: 16px;
+  border: 1px solid #2b2a31;
+  border-radius: 20px;
+  background: #15151a;
+}
+
+.preferences > .section-title {
+  margin-top: 0;
+}
+
+.preference-row {
+  padding: 13px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid #27262c;
+}
+
+.preference-row > span > b,
+.preference-row > span > small {
+  display: block;
+}
+
+.preference-row > span > b {
+  font-size: 11px;
+}
+
+.preference-row > span > small {
+  margin-top: 4px;
+  color: #85828c;
+  font-size: 8px;
+}
+
+.language-switch {
+  flex: 0 0 auto;
+  padding: 3px;
+  display: flex;
+  gap: 3px;
+  border: 1px solid #323038;
+  border-radius: 12px;
+  background: #0f0f12;
+}
+
+.language-switch button {
+  padding: 7px 9px;
+  border: 0;
+  border-radius: 9px;
+  color: #77747e;
+  background: transparent;
+  font-size: 8px;
+  font-weight: 850;
+}
+
+.language-switch button.active {
+  color: #fff;
+  background: #ff2855;
+}
+
+.preference-row.muted > em {
+  flex: 0 0 auto;
+  color: #77747e;
+  font-size: 8px;
+  font-style: normal;
+}

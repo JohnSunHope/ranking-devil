@@ -1,0 +1,172 @@
+.symbols {
+  padding: 34px 16px 38px;
+  gap: 10px;
+}
+
+.symbols > .symbol-rating-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 13px;
+}
+
+.symbol-rating-card > b {
+  margin-bottom: 9px;
+  font-size: 10px;
+}
+
+.symbol-rating-card > small {
+  margin-top: 7px;
+  color: #918e98;
+  font-size: 8px;
+}
+
+.symbol-cloud {
+  position: relative;
+  min-width: 0;
+}
+
+.symbol-cloud > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 2px;
+}
+
+.symbol-cloud span {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.22));
+}
+
+.symbol-cloud.medium span {
+  width: 16px;
+  height: 16px;
+  font-size: 13px;
+}
+
+.symbol-cloud.dense > div {
+  gap: 1px;
+}
+
+.symbol-cloud.dense span {
+  width: 12px;
+  height: 12px;
+  font-size: 10px;
+}
+
+.symbol-cloud.micro > div {
+  gap: 0;
+}
+
+.symbol-cloud.micro span {
+  width: 8px;
+  height: 8px;
+  font-size: 7px;
+}
+
+.symbol-cloud > b {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 3px 6px;
+  border: 1px solid #413e47;
+  border-radius: 10px;
+  color: #fff;
+  background: rgba(16, 16, 19, 0.92);
+  font-size: 8px;
+}
+
+.tile-score.tool-无限符号 {
+  padding: 13px 8px 38px;
+  gap: 7px;
+}
+
+.tile-score.tool-无限符号 > .tile-symbol-score {
+  width: 100%;
+  min-height: 0;
+  flex: 1;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.04);
+  filter: none;
+}
+
+.tile-symbol-score .symbol-cloud {
+  width: 100%;
+  overflow: hidden;
+}
+
+.tile-symbol-score .symbol-cloud > div {
+  justify-content: center;
+}
+
+.tile-symbol-score .symbol-cloud span {
+  width: 10px;
+  height: 10px;
+  font-size: 8px;
+}
+
+.tile-symbol-score .symbol-cloud.loose span,
+.tile-symbol-score .symbol-cloud.medium span {
+  width: 13px;
+  height: 13px;
+  font-size: 11px;
+}
+
+.tile-symbol-score .symbol-cloud.micro span {
+  width: 6px;
+  height: 6px;
+  font-size: 5px;
+}
+
+.tile-score.tool-无限符号 > .tile-symbol-score > small {
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+.symbol-editor-card {
+  overflow: hidden;
+  border: 1px solid #2b2a31;
+  border-radius: 16px;
+  background: #17171c;
+}
+
+.symbol-editor-card .value {
+  border: 0;
+  border-bottom: 1px solid #2b2a31;
+  border-radius: 0;
+}
+
+.symbol-editor-card > .symbol-cloud {
+  min-height: 76px;
+  padding: 11px;
+  display: flex;
+  align-items: center;
+}
+
+.symbol-editor-card > .symbol-cloud > div {
+  justify-content: center;
+}
+
+@media (max-width: 360px) {
+  .symbols {
+    padding-inline: 12px;
+  }
+
+  .symbol-cloud.dense span {
+    width: 10px;
+    height: 10px;
+    font-size: 8px;
+  }
+}

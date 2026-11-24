@@ -1,0 +1,188 @@
+/* 10+ object cards */
+.tile.count-10 .tile-cover,
+.tile.count-12 .tile-cover,
+.tile.count-14 .tile-cover,
+.tile.count-15 .tile-cover {
+  min-height: 320px;
+}
+
+.tile.count-10 .tile-score,
+.tile.count-12 .tile-score,
+.tile.count-14 .tile-score,
+.tile.count-15 .tile-score {
+  padding-inline: 7px;
+}
+
+.tile.count-12 .multi-images {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.tile.count-12 .multi-images > span {
+  min-height: 53px;
+  border-radius: 9px;
+}
+
+.tile.count-12 .multi-images strong {
+  font-size: 20px;
+}
+
+.tile.count-12 .multi-images small {
+  font-size: 5px;
+}
+
+.tile.count-12 .multi-bars {
+  gap: 5px;
+}
+
+.tile.count-12 .multi-bars > span {
+  grid-template-columns: 42px minmax(0, 1fr) 19px;
+}
+
+.tile.count-12 .multi-bars > span > i {
+  height: 6px;
+}
+
+.tile.count-14 .multi-bubbles {
+  gap: 3px;
+}
+
+.tile.count-15 .multi-ranking > span {
+  padding-block: 3px;
+}
+
+.tile.count-10 .multi-symbols {
+  gap: 3px;
+}
+
+.tile.count-10 .multi-symbols > span {
+  min-height: 23px;
+  grid-template-columns: 1fr 40px;
+  padding: 3px;
+}
+
+/* 10+ object detail pages use an internal scroll area. */
+.multi-detail.many .rating {
+  height: min(62dvh, 560px);
+  min-height: 460px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #48454f transparent;
+}
+
+.multi-detail.many .rating > label {
+  position: sticky;
+  z-index: 3;
+  bottom: 10px;
+  width: max-content;
+  display: block;
+  margin: 8px auto 0;
+  translate: 0;
+}
+
+.multi-detail.many .bars {
+  padding: 28px 16px 20px;
+  display: grid;
+  align-content: start;
+  gap: 11px;
+}
+
+.multi-detail.many .bar > span {
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+
+.multi-detail.many .bar > i {
+  height: 10px;
+}
+
+.multi-detail.many .detail-ranking {
+  padding: 22px 14px 18px;
+}
+
+.multi-detail.many .detail-ranking > div {
+  height: auto;
+  justify-content: flex-start;
+}
+
+.multi-detail.many .detail-ranking > div > span {
+  padding: 10px 7px;
+}
+
+.image-score.many {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  background: #131318;
+}
+
+.image-score.many > div {
+  min-height: 105px;
+  border-radius: 14px;
+}
+
+.image-score.many > div > span {
+  font-size: 36px;
+}
+
+.image-score.many > div > b {
+  max-width: 92%;
+  margin-top: 7px;
+  overflow: hidden;
+  font-size: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.multi-detail.many .symbols {
+  padding: 14px 12px 22px;
+  display: grid;
+  align-content: start;
+}
+
+.multi-detail.many .symbol-rating-card {
+  padding: 10px;
+}
+
+.multi-detail.many .detail-bubbles {
+  padding: 18px 12px 24px;
+}
+
+.multi-detail.many .detail-bubbles > div {
+  height: auto;
+  align-content: flex-start;
+}
+
+.multi-detail.many .object-summary > div {
+  max-height: 210px;
+  overflow-y: auto;
+}
+
+.multi-detail.many .object-summary > div > span {
+  flex: 1 1 calc(50% - 7px);
+  justify-content: space-between;
+}
+
+.multi-detail.many .controls::after {
+  content: '上下滑动查看全部';
+  align-self: center;
+  color: #77747e;
+  font-size: 8px;
+}
+
+@media (max-width: 360px) {
+  .image-score.many {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .image-score.many > div {
+    min-height: 92px;
+  }
+
+  .image-score.many > div > span {
+    font-size: 30px;
+  }
+}
